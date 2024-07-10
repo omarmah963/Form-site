@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: white;
+}
+body {
+  height: 100vh;
+  background-image: url("images/background.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+}
+.header {
+  background-color: transparent;
+  display: flex;
+  padding: 25px 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+}
+
+.navbar a {
+  position: relative;
+
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 20px;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+.navbar a::before {
+  transform: translateY(40px);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+  transition: 0.3s;
+  top: 0;
+  opacity: 0;
+}
+.navbar a:hover::before {
+  color: red;
+  transform: translateY(30px);
+  background-color: red;
+  opacity: 1;
+}
+.navbar a:hover {
+  color: red;
+}
+.header form {
+  display: flex;
+  height: 36px;
+  position: relative;
+}
+.header .search {
+  font-size: 15px;
+  padding: 7px;
+  width: 250px;
+  height: 100%;
+  border-radius: 5px;
+  border-color: var(--main-color);
+  background-color: transparent;
+  color: var(--main-color);
+  outline: none;
+}
+.header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  margin-right: 6px;
+}
+.container {
+  display: flex;
+  width: 75%;
+  height: 550px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 31px;
+  background-image: url("images/background.avif");
+}
+.container .div1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 100%;
+  background-color: transparent;
+  padding: 40px;
+  color: var(--main-color);
+}
+.container .div1 h2 {
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.container .div1 .content {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.container .div1 .content h1 {
+  font-size: 41px;
+  line-height: 1;
+}
+.container .div1 .content h3 {
+  font-size: 23px;
+}
+.container .div1 .content p {
+  margin: 10px 0;
+}
+.div1 .social {
+  padding: 9px;
+}
+.social a i {
+  color: var(--main-color);
+  font-size: 25px;
+  margin-left: 7px;
+  transition: 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.social a i:hover {
+  color: red;
+  font-size: 30px;
+}
+.container .log {
+  width: 40%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .log h2 {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.one {
+  position: relative;
+  margin-bottom: 30px;
+}
+.two {
+  position: relative;
+  margin-bottom: 30px;
+}
+.one label {
+  color: var(--main-color);
+  position: absolute;
+  pointer-events: none;
+  font-weight: bold;
+  top: -8px;
+}
+.one input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+
+.two label {
+  color: var(--main-color);
+  position: absolute;
+  pointer-events: none;
+  font-weight: bold;
+  top: -8px;
+}
+.two input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+.two input:focus .log .two + label {
+  display: none;
+}
+.one span i {
+  color: var(--main-color);
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.two span i {
+  color: var(--main-color);
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.remember {
+  display: flex;
+  justify-content: space-between;
+}
+.remember label {
+  color: var(--main-color);
+}
+.remember a {
+  color: var(--main-color);
+  text-decoration: none;
+  margin-left: 20px;
+
+}
+.remember input {
+  margin-right: 5px;
+}
+.log button {
+  width: 100%;
+  height: 30px;
+  background-color: red;
+  color: var(--main-color);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px;
+  margin: 11px;
+
+}
+.empty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.empty p {
+  color: var(--main-color);
+}
+.empty a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 18px;
+}
